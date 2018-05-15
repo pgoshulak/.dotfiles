@@ -215,7 +215,6 @@ alias pw='less ~/Dropbox/pw.txt'
 alias vpw='vim ~/Dropbox/pw.txt'
 alias ll='ls -FGahl --show-control-chars --color=always'
 alias ls='ls -AF --show-control-chars --color=always'
-alias glo='git log --oneline --decorate --graph'
 
 # Copy working directory from one terminal to another
 alias cpwd='pwd | xclip -i' # CoPy WD
@@ -228,6 +227,36 @@ alias vim2='eog ~/Dropbox/vim2.png'
 
 # Let xclip access the native clipboard (Ctrl+C/X/V)
 alias cclip='xclip -selection clipboard'
+
+# Git aliases
+alias gs='git status'
+alias glo='git log --oneline --decorate --graph'
+alias gpush='git push'
+alias gpull='git pull'
+ga () {
+  git add "$@"
+}
+gcm () {
+  git commit \-m "$@" 
+}
+gcam () {
+  git commit \-am "$@" 
+}
+gco () {
+  git checkout "$@"
+}
+gcob () {
+  git checkout \-b "$@" 
+}
+gb () {
+  git branch "$@"
+}
+gbd () {
+  git branch \-d "$@" 
+}
+gd () {
+  git diff "$@"
+}
 
 pwg () {
         less ~/Dropbox/pw.txt | grep "$@"
@@ -268,3 +297,10 @@ shopt -s nocaseglob  # match filenames in case-insensitive fashion during filena
 
 xinput set-prop 15 312 100 100
 
+# From Medium / Lars Kappert
+# https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
+set show-all-if-ambiguous on      # list all matches on multiple possible completions
+alias -- -="cd -"                 # prev dir
+function mk() {
+  mkdir -p "$@" && cd "$@"
+}
