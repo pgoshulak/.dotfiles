@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $(xdotool search --name '/bin/bash') -eq 0 ]]; then
+	terminator
+elif [ $(xdotool getwindowfocus getwindowname) == "/bin/bash" ]; then
+	xdotool search '/bin/bash' windowminimize
+else
+	xdotool search '/bin/bash' windowactivate
+fi
+
+# else:... bash -c "wmctrl -a bash || terminator"
