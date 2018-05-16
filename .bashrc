@@ -282,6 +282,12 @@ backupDotfile () {
   ln -sv ~/.dotfiles/$1 ./$1
 }
 
+# Kill process using a specific port (-i asks for confirmation before killing)
+killPort () {
+  fuser -n tcp "$@" -vik
+}
+
+
 #
 # From samy.pl/tools
 #
