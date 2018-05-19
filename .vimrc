@@ -64,11 +64,12 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Move temp files and swap files to /tmp 
+" Move temp, swap, and undo files to /tmp 
 " http://vim.wikia.com/wiki/Remove_swap_and_backup_files_from_your_working_directory
-" set backupdir=/tmp//
-" set directory=/tmp//
+" https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
 set bdir-=.
 set bdir+=/tmp//
 set dir-=.
 set dir+=/tmp//
+set undodir-=.
+set undodir=/tmp//
