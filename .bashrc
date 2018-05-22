@@ -228,6 +228,9 @@ alias vim2='eog ~/Dropbox/vim2.png'
 # Let xclip access the native clipboard (Ctrl+C/X/V)
 alias cclip='xclip -selection clipboard'
 
+# Access the LHL vagrant machine
+alias vag='cd ~/lighthouse && vagrant up && vagrant ssh'
+
 # Git aliases
 alias gs='git status'
 alias glo='git log --oneline --decorate --graph'
