@@ -64,6 +64,12 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" https://stackoverflow.com/questions/1445992/vim-file-navigation
+set wildmenu
+set wildignore=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif
+set wildmode=list:full
+set autochdir
+
 " Move temp, swap, and undo files to /tmp 
 " http://vim.wikia.com/wiki/Remove_swap_and_backup_files_from_your_working_directory
 " https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
