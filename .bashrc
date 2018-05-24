@@ -217,8 +217,8 @@ alias ll='ls -FGahl --show-control-chars --color=always'
 alias ls='ls -AF --show-control-chars --color=always'
 
 # Copy working directory from one terminal to another
-alias cpwd='pwd | xclip -i' # CoPy WD
-alias pswd='cd "xclip -o"'  # PaSte WD
+alias yywd='pwd | xclip -i' # yank (copy) Working Directory
+alias ppwd='cd $(xclip -o)' # put (paste) Working Directory
 
 # Helpful images (eg. keyboard binding maps)
 alias screen='eog ~/Dropbox/keyboard.png'
