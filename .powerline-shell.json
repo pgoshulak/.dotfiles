@@ -1,0 +1,27 @@
+{
+  "segments": [
+    "battery",
+    "virtual_env", 
+    "ssh", 
+    "cwd", 
+    "git", 
+    "jobs", 
+    "newline",
+    "root"
+  ],
+  "cwd": {
+    "mode": "plain",
+    "max_depth": 5,
+    "max_dir_size": 3,
+    "full_cwd": "true"
+  },
+  "vcs": {
+	  "show_symbol": true
+  },
+  "hostname": {
+	  "colorize": true 
+  },
+  "battery": {
+	  "low_threshold": 20
+  }
+}
