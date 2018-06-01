@@ -231,6 +231,9 @@ alias cclip='xclip -selection clipboard'
 # Access the LHL vagrant machine
 alias vag='cd ~/lighthouse && vagrant up && vagrant ssh'
 
+# Shortcut to edit .bashrc
+alias editbashrc='vim ~/.bashrc'
+
 # Git aliases
 alias gs='git status'
 alias glo='git log --oneline --decorate --graph'
@@ -286,10 +289,15 @@ backupDotfile () {
 }
 
 # Kill process using a specific port (-i asks for confirmation before killing)
-killPort () {
+killport () {
   fuser -n tcp "$@" -vik
 }
 
+# List processes using a specific port (in case killPort doesn't work)
+listport () {
+  sudo lsof -i :"$@"
+  echo "Use <sudo kill PID> to kill the process"
+}
 
 #
 # From samy.pl/tools
