@@ -233,6 +233,7 @@ alias vag='cd ~/lighthouse && vagrant up && vagrant ssh'
 
 # Shortcut to edit .bashrc
 alias editbashrc='vim ~/.bashrc'
+alias dotfiles='cd ~/.dotfiles'
 
 # Git aliases
 alias gs='git status'
