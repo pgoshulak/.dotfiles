@@ -303,7 +303,7 @@ listport () {
 #
 # From samy.pl/tools
 #
-set completion-ignore-case on  # ignore case when copmleting filenames
+bind 'set completion-ignore-case on'  # ignore case when copmleting filenames
 export IGNOREEOF=1  # don't quit on ctrl+D
 shopt -s cdspell  # correct mistyped dir names when using 'cd'
 shopt -s autocd  # just type name of directory instead of 'cd directory'
