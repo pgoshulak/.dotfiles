@@ -322,3 +322,6 @@ alias -- -="cd -"                 # prev dir
 function mk() {
   mkdir -p "$@" && cd "$@"
 }
+
+# Ukko ------------
+alias ssh-ukko='ssh root@138.197.165.206'
