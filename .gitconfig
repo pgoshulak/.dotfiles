@@ -13,3 +13,5 @@
   changes=diff --name-status -r
   diffstat=diff --stat -r
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+[core]
+	editor = vim
