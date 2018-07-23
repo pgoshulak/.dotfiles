@@ -15,3 +15,5 @@
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [core]
 	editor = vim
+[fetch]
+	prune = true
