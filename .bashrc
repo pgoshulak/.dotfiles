@@ -282,12 +282,25 @@ copy () {
   cat $1 | xclip -i -selection clipboard
 }
 
-# Copy file to ~/Dropbox/linux/dotfiles and make symlink
+# Copy file to ~/.dotfiles and make symlink
 backupDotfile () {
   echo Copying $1 to ~/.dotfiles/$1
   mv ./$1 ~/.dotfiles
   ln -sv ~/.dotfiles/$1 ./$1
 }
+
+# Copy dotfile (from backup) into current dir and make symlink (eg. for setting up new system)
+restoreDotfile () {
+  echo Restoring $1 from ~/.dotfiles/$1
+  ln -sv ~/.dotfiles/$1 ./$1
+}
+
+# Copy config file (from backup) into current dir and make symlink (eg. for setting up new system)
+restoreConfigfile () {
+  echo Restoring config files from ~/.dotfiles/.config/$1
+  ln -sv ~/.dotfiles/.config/$1 ~/.config/$1
+}
+
 
 # Kill process using a specific port (-i asks for confirmation before killing)
 killport () {
