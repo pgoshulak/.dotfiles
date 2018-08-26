@@ -313,6 +313,17 @@ listport () {
   echo "Use <sudo kill PID> to kill the process"
 }
 
+# Back up firebase database
+# https://github.com/jloosli/node-firestore-import-export
+export GOOGLE_APPLICATION_CREDENTIALS=~/dev/peeph-wedding-firebase.json
+firebase-backup () {
+  mkdir -p ~/Dropbox/wedding-backups/guests/
+  mkdir -p ~/Dropbox/wedding-backups/families/
+  firestore-export -p -n guests -b ~/Dropbox/wedding-backups/guests/$(date +%Y-%m-%d--%H-%M-%S).json
+  firestore-export -p -n families -b ~/Dropbox/wedding-backups/families/$(date +%Y-%m-%d--%H-%M-%S).json
+  echo "Successfully backed up /guests/ and /families/"
+}
+
 #
 # From samy.pl/tools
 #
