@@ -215,6 +215,7 @@ alias pw='less ~/Dropbox/pw.txt'
 alias vpw='vim ~/Dropbox/pw.txt'
 alias ll='ls -FGahl --show-control-chars --color=always'
 alias ls='ls -AF --show-control-chars --color=always'
+alias plz='sudo !!'
 
 # Copy working directory from one terminal to another
 alias yywd='pwd | xclip -i' # yank (copy) Working Directory
