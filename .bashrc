@@ -314,6 +314,12 @@ listport () {
   echo "Use <sudo kill PID> to kill the process"
 }
 
+# Count files by type in current directory (recursive)
+# Can include multiple filetypes using '|' as separator, eg. `$ countfiles 'jpeg|jpg'`
+countfiles () {
+  find . -type f | sed -e 's/.*\.//' | sort | uniq -c | sort -n | grep -Ei '('$@')$'
+}
+
 # Back up firebase database
 # https://github.com/jloosli/node-firestore-import-export
 export GOOGLE_APPLICATION_CREDENTIALS=~/dev/peeph-wedding-firebase.json
