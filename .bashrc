@@ -354,8 +354,11 @@ function mk() {
 }
 
 # Ukko ------------
-alias ssh-ukko='ssh root@138.197.165.206'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export GRADLE_HOME=/opt/gradle/gradle-5.0/
+export PATH=$PATH:/opt/gradle/gradle-5.0/bin
