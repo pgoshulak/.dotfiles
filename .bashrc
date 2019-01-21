@@ -286,7 +286,7 @@ copy () {
 # Copy file to ~/.dotfiles and make symlink
 backupDotfile () {
   echo Copying $1 to ~/.dotfiles/$1
-  mv ./$1 ~/.dotfiles
+  mv ./$1 ~/.dotfiles/$1
   ln -sv ~/.dotfiles/$1 ./$1
 }
 
