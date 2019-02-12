@@ -241,6 +241,7 @@ alias gs='git status'
 alias glo='git log --oneline --decorate --graph'
 alias gpush='git push'
 alias gpull='git pull'
+alias gds='git diffstat'
 ga () {
   git add "$@"
 }
@@ -354,6 +355,7 @@ function mk() {
 }
 
 # Ukko ------------
+. ~/.ukkorc
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
