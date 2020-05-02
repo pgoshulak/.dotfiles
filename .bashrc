@@ -354,6 +354,10 @@ function mk() {
   mkdir -p "$@" && cd "$@"
 }
 
+# Disable CTRL+s from freezing terminal
+# Allow command history search=CTRL+r; reverse=CTRL+s
+stty -ixon
+
 # Ukko ------------
 . ~/.ukkorc
 
@@ -364,3 +368,9 @@ export NVM_DIR="$HOME/.nvm"
 #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export GRADLE_HOME=/opt/gradle/gradle-5.0/
 export PATH=$PATH:/opt/gradle/gradle-5.0/bin
+
+###-tns-completion-start-###
+if [ -f /home/peter/.tnsrc ]; then 
+    source /home/peter/.tnsrc 
+fi
+###-tns-completion-end-###
