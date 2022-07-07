@@ -1,0 +1,5 @@
+export UKKO_SSH="138.197.165.206"
+export AWS_SERVER="ec2-100-24-57-171.compute-1.amazonaws.com"
+export ANDROID_HOME="/usr/local/android/sdk"
+# export ANDROID_SDK_ROOT="/home/peter/Android/Sdk"
+export PATH="${PATH}:${ANDROID_HOME}tools/:${ANDROID_HOME}platform-tools/"
