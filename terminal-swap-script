@@ -1,5 +1,13 @@
 #!/bin/bash
 
+### Usage ###
+# Settings > Devices > Keyboard > Scroll to bottom of list
+# Add new shortcut:
+#
+# Name: Focus terminator terminal
+# Command: bash /home/peter/terminal-swap-script
+# Shortcut: Ctrl + `
+
 if [[ $(xdotool search --name '/bin/bash') -eq 0 ]]; then
 	terminator
 elif [ $(xdotool getwindowfocus getwindowname) == "/bin/bash" ]; then
