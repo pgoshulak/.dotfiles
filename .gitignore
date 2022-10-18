@@ -1,1 +1,11 @@
 *.un~
+
+# Allow .config/ dir
+!.config
+
+# Block all subdirs in .config/
+.config/*
+
+# Allow specific subdirs in .config/
+!.config/terminator/
+!.config/powerline-shell/
