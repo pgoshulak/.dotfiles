@@ -1,13 +1,20 @@
 [global_config]
   handle_size = 5
+  suppress_multiple_term_dialog = True
 [keybindings]
-  layout_launcher = <Primary><Alt>l
-  line_down = <Primary>Down
-  line_up = <Primary>Up
-  next_tab = None
-  page_down_half = <Primary>Page_Down
   page_up_half = <Primary>Page_Up
+  page_down_half = <Primary>Page_Down
+  line_up = <Primary>Up
+  line_down = <Primary>Down
+  next_tab = None
   prev_tab = None
+  layout_launcher = <Primary><Alt>l
+[profiles]
+  [[default]]
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 600
 [layouts]
   [[default]]
     [[[child0]]]
@@ -40,9 +47,3 @@
       type = Terminal
       uuid = 3791081b-4b32-429b-9eca-130abeee00ee
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.9
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 600
